@@ -1,36 +1,158 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://github.com/vercel/next.js/tree/canary/packages/create-next-app).
+# Wanderlust
+
+Wanderlust is a simple travel destination management project created to practice CRUD operations.
+
+Through this project, I practiced connecting a Next.js frontend application with a backend API and performing Create, Read, Update, and Delete operations.
+
+## Project Purpose
+
+The main purpose of this project is to understand and practice CRUD operations in a simple travel-based application.
+
+CRUD stands for:
+
+- **Create** — Add a new destination
+- **Read** — View destinations and their details
+- **Update** — Edit existing destination information
+- **Delete** — Remove a destination
+
+## Features
+
+- Add a new travel destination
+- View all destinations
+- View details of a specific destination
+- Edit destination information
+- Delete a destination
+- Delete confirmation dialog
+- Dynamic destination details page
+- Form handling and validation
+- Responsive user interface
+
+## Destination Information
+
+Each destination contains information such as:
+
+- Destination name
+- Country
+- Category
+- Price
+- Duration
+- Departure date
+- Image URL
+- Description
+
+## Technologies Used
+
+- Next.js
+- React
+- Tailwind CSS
+- HeroUI
+- React Icons
+- REST API
+
+## CRUD Operations
+
+| Operation | HTTP Method | Description |
+| --- | --- | --- |
+| Create | POST | Add a new destination |
+| Read | GET | Get all destinations or a single destination |
+| Update | PATCH | Update destination information |
+| Delete | DELETE | Delete a destination |
 
 ## Getting Started
 
-First, run the development server:
+Follow the steps below to run the project locally.
+
+### 1. Clone the repository
+
+```bash
+git clone https://github.com/sufianWG/wanderlust.git
+```
+
+### 2. Go to the project directory
+
+```bash
+cd wanderlust
+```
+
+### 3. Install the dependencies
+
+```bash
+npm install
+```
+
+### 4. Run the development server
 
 ```bash
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+### 5. Open the project
 
-You can start editing the page by modifying `app/page.js`. The page auto-updates as you edit the file.
+Open the following URL in your browser:
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+```text
+http://localhost:3000
+```
 
-## Learn More
+## Backend Requirement
 
-To learn more about Next.js, take a look at the following resources:
+This frontend application requires a backend server to store and manage destination data.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
+The project currently sends API requests to:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+```text
+http://localhost:5260
+```
 
-## Deploy on Vercel
+Make sure the backend server is running before using the CRUD features.
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Available Scripts
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+### Start the development server
+
+```bash
+npm run dev
+```
+
+### Create a production build
+
+```bash
+npm run build
+```
+
+### Start the production server
+
+```bash
+npm start
+```
+
+### Check linting issues
+
+```bash
+npm run lint
+```
+
+## What I Practiced
+
+Through this project, I practiced:
+
+- Connecting a Next.js frontend with a backend API
+- Sending GET, POST, PATCH, and DELETE requests
+- Fetching and displaying data
+- Creating and submitting forms
+- Working with dynamic routes
+- Updating existing data
+- Deleting data with a confirmation dialog
+- Redirecting users after successful operations
+- Using reusable React components
+- Building a simple responsive interface
+
+## Repository
+
+[View the Wanderlust repository](https://github.com/sufianWG/wanderlust)
+
+## Author
+
+**Md. Abu Sufian**
+
+This project was created for learning and practicing CRUD operations.
