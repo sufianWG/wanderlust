@@ -8,7 +8,7 @@ import { GoArrowUpRight } from 'react-icons/go';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const DestinationCard = ({ destination }) => {
-    const { country, destinationName, price, duration, imageUrl } = destination;
+    const {_id, country, destinationName, price, duration, imageUrl } = destination;
     // console.log("country: ", country, "destinationName: ", destinationName, "price: ", price, "duration: ", duration );
     // console.log(imageUrl);
     return (
@@ -40,8 +40,8 @@ const DestinationCard = ({ destination }) => {
                     </div>
                     <small className='flex items-center text-base text-gray-500 gap-1'><CiCalendarDate /> {duration}</small>
                 </div>
-                <Link href={`/all-destinations`}>
-                    <Button variant='outline'>BOOK NOW <GoArrowUpRight /> </Button>
+                <Link href={`/all-destinations/${_id}`}>
+                    <Button variant='outline' className="text-sm font-bold flex items-center-safe">BOOK NOW <GoArrowUpRight /> </Button>
                 </Link>
             </Card>
         </div>
