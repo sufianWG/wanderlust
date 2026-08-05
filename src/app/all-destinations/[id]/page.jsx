@@ -1,9 +1,10 @@
+import DeleteDestination from '@/components/DeleteDestination';
 import EditDestination from '@/components/EditDestination';
 import { destinationDetail } from '@/lib/api';
 import { Button } from '@heroui/react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { FaArrowLeft } from 'react-icons/fa';
+import { FaArrowLeft, FaTrash } from 'react-icons/fa';
 import { IoLocationOutline } from 'react-icons/io5';
 
 const destiationDetailPage = async ({ params }) => {
@@ -18,10 +19,8 @@ const destiationDetailPage = async ({ params }) => {
                 <div className='mt-10 flex justify-between items-center mb-1'>
                     <Link href="/all-destinations" className='flex items-center gap-2'> <FaArrowLeft></FaArrowLeft> Back to destination</Link>
                     <div className='flex gap-2 items-center'>
-                        
                         <EditDestination destination={destination}></EditDestination>
-
-                        <Button className="p-2 rounded-none cursor-pointer" variant='danger-soft'>Cancel</Button>
+                        <DeleteDestination destination={destination}></DeleteDestination>
                     </div>
                 </div>
                 <div className='aspect-[2/1] relative' >
@@ -44,6 +43,7 @@ const destiationDetailPage = async ({ params }) => {
                 </div>
                 <div>
                     <h1>{duration}</h1>
+                    <h3>{departureDate}</h3>
                     <p>{description}</p>
 
                 </div>

@@ -1,6 +1,8 @@
 "use client"
 import { Button, FieldError, Input, Label, ListBox, Modal, Surface, TextArea, TextField, Select } from "@heroui/react";
-import { BiEnvelope } from "react-icons/bi";
+import { redirect } from "next/navigation";
+import { FaEdit } from "react-icons/fa";
+
 
 const EditDestination = ({destination}) => {
     const { _id, country, destinationName, price, duration, imageUrl, departureDate, description, category } = destination;
@@ -20,11 +22,14 @@ const EditDestination = ({destination}) => {
 
         const data = await res.json();
         console.log(data);
+        if(data.modifiedCount > 0){
+             redirect("/all-destinations");
+        }
 
     }
     return (
         <Modal>
-            <Button className="p-2 rounded-none cursor-pointer" variant='outline'>Edit</Button>
+            <Button className="p-2 rounded-none cursor-pointer flex items-center" variant='outline'> <FaEdit></FaEdit> Edit</Button>
             <Modal.Backdrop>
                 <Modal.Container placement="auto">
                     <Modal.Dialog className="sm:max-w-2xl">
