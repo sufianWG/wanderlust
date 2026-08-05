@@ -1,10 +1,10 @@
 "use client"
 
 import { authClient } from '@/lib/auth-client';
-import { Button, Card, Description, FieldError, Form, Input, Label, TextField } from '@heroui/react';
+import { Button, Card, Description, FieldError, Form, Input, Label, Separator, TextField } from '@heroui/react';
 import { useRouter } from 'next/navigation';
 import React, { useState } from 'react';
-import { FaGoogle, FaEye, FaEyeSlash  } from 'react-icons/fa';
+import { FaGoogle, FaEye, FaEyeSlash } from 'react-icons/fa';
 import { toast } from 'react-toastify';
 
 const SignUpPage = () => {
@@ -110,16 +110,20 @@ const SignUpPage = () => {
                     <FieldError />
                 </TextField>
                 <div className="flex gap-2">
-                    <Button className={'bg-[#0F7180] hover:bg-[#075A66]'} type="submit">
+                    <Button className={'bg-[#0F7180] hover:bg-[#075A66] rounded-none w-full'} type="submit">
                         Sign Up
-                    </Button>
-                    <Button type="reset" variant="secondary">
-                        Reset
                     </Button>
                 </div>
             </Form>
+            <div className='max-w-30 mx-auto flex justify-center items-center gap-3'>
+                <Separator></Separator>
+                <div className='whitespace-nowrap'>
+                    or Sign in With
+                </div>
+                <Separator></Separator>
+            </div>
             <div className='mt-3'>
-                <Button className={'w-full text-base rounded-full bg-transparent text-[#0F7180] border border-[#0F7180] hover:border-[#075A66] hover:bg-[#075A66] hover:text-white'} onClick={handleGoogleLogin}> <FaGoogle></FaGoogle> Sign In With Google</Button>
+                <Button className={'w-full text-base rounded-none bg-transparent text-[#0F7180] border border-[#0F7180] hover:border-[#075A66] hover:bg-[#075A66] hover:text-white'} onClick={handleGoogleLogin}> <FaGoogle></FaGoogle> Sign In With Google</Button>
             </div>
         </Card >
 

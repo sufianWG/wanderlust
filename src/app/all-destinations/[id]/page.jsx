@@ -1,3 +1,4 @@
+import BookingCard from '@/components/BookingCard';
 import DeleteDestination from '@/components/DeleteDestination';
 import EditDestination from '@/components/EditDestination';
 import { destinationDetail } from '@/lib/api';
@@ -31,24 +32,18 @@ const destiationDetailPage = async ({ params }) => {
                         sizes=''
                         className='object-cover max-w-7xl mx-auto'
                     >
-                    
+
                     </Image>
                 </div>
                 <div className='flex justify-between gap-3 items-center my-3'>
-                    <small className='text-gray-500 text-base font-bold flex items-center gap-1'> <IoLocationOutline /> {country}</small>
-                    <div>${price}</div>
-                </div>
-                <div>
-                    {destinationName}
-                </div>
-                <div>
-                    <h1>{duration}</h1>
-                    <h3>{departureDate}</h3>
-                    <p>{description}</p>
-
-                </div>
-                <div>
-
+                    <div>
+                        <small className='text-gray-500 text-base font-bold flex items-center gap-1'> <IoLocationOutline /> {country}</small>
+                        <h1 className='text-xl font-bold'>{destinationName}</h1>
+                        <h2>{duration}</h2>
+                        <h3>{departureDate}</h3>
+                        <p>{description}</p>
+                    </div>
+                    <BookingCard destination={destination}></BookingCard>
                 </div>
             </div>
             <div>
