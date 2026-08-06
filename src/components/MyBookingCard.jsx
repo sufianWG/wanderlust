@@ -8,6 +8,7 @@ import DeleteBooking from './DeleteBooking';
 
 const MyBookingCard = ({booking}) => {
     const {_id, destinationName, departureDate, price, destinationImg} = booking;
+    
     return (
         <div>
             <Card className='rounded-none grid grid-cols-3 gap-2 border shadow'>
